@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.lahzebar.features.contacts.frequent.FrequentFragment">
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="iv_select_all_icon,tv_selected_number,iv_delete_icon,view_select" />
+
+    <View
+        android:id="@+id/view_select"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_select_all_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/select_all_content_frequent"
+        android:paddingHorizontal="18dp"
+        android:paddingVertical="5dp"
+        android:src="@drawable/unselect_icon"
+        app:layout_constraintBottom_toBottomOf="@id/view_select"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/view_select" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_selected_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="?attr/palphone_light_font"
+        android:textColor="?attr/palphone_main_text_color"
+        android:textSize="10dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/iv_select_all_icon"
+        app:layout_constraintLeft_toLeftOf="@+id/iv_select_all_icon"
+        app:layout_constraintRight_toRightOf="@id/iv_select_all_icon"
+        app:layout_constraintTop_toTopOf="@id/iv_select_all_icon"
+        tools:ignore="SpUsage"
+        tools:text="2" />
+
+    <ImageView
+        android:id="@+id/iv_delete_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:contentDescription="@string/delete_icon_content_frequent"
+        android:paddingHorizontal="18dp"
+        android:paddingVertical="5dp"
+        android:src="@drawable/trash_icon"
+        app:layout_constraintBottom_toBottomOf="@id/view_select"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/view_select" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_frequent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_select" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="20dp">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_fss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="28dp" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="290dp"
+        android:layout_height="160dp"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical"
+            android:weightSum="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.12"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/pal_tv_fss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="?attr/palphone_regular_font"
+                    android:text="@string/pal"
+                    android:textAllCaps="true"
+                    android:textColor="?attr/palphone_profile_pal_text_color"
+                    android:textSize="31dp"
+                    tools:ignore="SpUsage"
+                    app:layout_constraintStart_toStartOf="@id/guideline_fss"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/phone_tv_fss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="?attr/palphone_semibold_font"
+                    android:text="@string/PHONE"
+                    android:textColor="?attr/palphone_profile_phone_text_color"
+                    android:textSize="31dp"
+                    app:layout_constraintStart_toEndOf="@id/pal_tv_fss"
+                    app:layout_constraintTop_toTopOf="@+id/pal_tv_fss"
+                    tools:ignore="SpUsage" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/easy_tv_fss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="?attr/palphone_semibold_font"
+                    android:lineHeight="30dp"
+                    android:text="@string/EASY"
+                    android:textColor="?attr/palphone_profile_phone_text_color"
+                    android:textSize="26dp"
+                    tools:ignore="SpUsage,UnusedAttribute"
+                    app:layout_constraintStart_toStartOf="@id/guideline_fss"
+                    app:layout_constraintTop_toBottomOf="@+id/pal_tv_fss" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/global_tv_fss"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:fontFamily="?attr/palphone_semibold_font"
+                    android:text="@string/GLOBAL"
+                    android:textColor="?attr/palphone_profile_phone_text_color"
+                    android:textSize="26dp"
+                    tools:ignore="SpUsage"
+                    app:layout_constraintStart_toEndOf="@+id/easy_tv_fss"
+                    app:layout_constraintTop_toBottomOf="@+id/pal_tv_fss" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".132">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/identification_tv_fss"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="?attr/palphone_semibold_font"
+                    android:text="@string/IDENTIFICATION"
+                    android:textColor="?attr/palphone_profile_phone_text_color"
+                    android:textSize="26dp"
+                    tools:ignore="SpUsage"
+                    app:layout_constraintStart_toStartOf="@id/guideline_fss"
+                    app:layout_constraintTop_toBottomOf="@+id/global_tv_fss" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/lets_get_started_tv_fss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="116dp"
+        android:fontFamily="?attr/palphone_semibold_font"
+        android:includeFontPadding="false"
+        android:text="@string/LETS_GET_START"
+        android:textColor="?attr/palphone_splash_sentence_text_color"
+        android:textSize="@dimen/large_font_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout2"
+        tools:ignore="SpUsage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

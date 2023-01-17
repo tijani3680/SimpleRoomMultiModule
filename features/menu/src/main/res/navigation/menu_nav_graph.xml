@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/menu_nav_graph"
+    app:startDestination="@id/menuFragment">
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="app.lahzebar.features.menu.MenuFragment"
+        android:label="MenuFragment"
+        tools:layout="@layout/fragment_menu">
+        <action
+            android:id="@+id/action_TitleProfileFragment_to_profileFragment"
+            app:destination="@id/profileFragment" >
+            <argument
+                android:name="palId"
+                app:argType="string"
+                app:nullable="true"/>
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="app.lahzebar.features.profile.ProfileFragment"
+        tools:layout="@layout/fargment_profile">
+        <argument
+            android:name="palId"
+            app:argType="string"
+            app:nullable="true"/>
+        <action
+            android:id="@+id/action_profileFragment_to_editFragment"
+            app:destination="@id/editFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/TitleProfileFragment"
+        android:name="app.lahzebar.features.profile.TitleProfileFragment"
+        tools:layout="@layout/fargment_profile"/>
+    <dialog
+        android:id="@+id/logoutDialogFragment"
+        android:name="app.lahzebar.features.settings.logout.LogoutDialogFragment"
+        android:label="LogoutDialogFragment" />
+    <action
+        android:id="@+id/action_global_logoutDialogFragment"
+        app:destination="@id/logoutDialogFragment" />
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="app.lahzebar.features.edit.EditFragment"
+        android:label="EditFragment" />
+
+</navigation>

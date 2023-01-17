@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="name">Abolfazl Tijani</string>
+    <string name="caption">Even the stars were jealous of the sparkle in her eyes</string>
+    <string name="like">Like By 1000 people</string>
+    <string name="comment">500 Comment</string>
+    <string name="edit_text_hint">Write Something...</string>
+
+</resources>

@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="SpUsage">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/start_vertical_gl_fp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/palphone_profile_start_vertical_guideline_marginStart" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/end_vertical_gl_fp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/palphone_profile_start_vertical_guideline_marginStart" />
+
+        <ImageView
+            android:id="@+id/back_icon_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="17dp"
+            android:contentDescription="@string/warning"
+            android:padding="10dp"
+            android:src="@drawable/back_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/edit_icon_iv_fp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="35dp"
+            android:contentDescription="@string/warning"
+            android:padding="10dp"
+            android:src="?attr/palphone_edit_icon_profile"
+            app:layout_constraintEnd_toEndOf="@+id/end_vertical_gl_fp"
+            app:layout_constraintTop_toBottomOf="@+id/back_icon_iv" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/profile_image_riv_fp"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_marginStart="@dimen/palphone_profile_image_marginStart"
+            android:layout_marginTop="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/back_icon_iv"
+            app:riv_corner_radius="5dp" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/contact_name_tv_fp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ellipsize="end"
+            android:fontFamily="?attr/palphone_light_font"
+            android:maxLines="1"
+            android:textColor="?attr/palphone_main_title_text_color"
+            android:textDirection="ltr"
+            android:textSize="@dimen/xxlarge_font_size"
+            app:layout_constraintEnd_toEndOf="@id/end_vertical_gl_fp"
+            app:layout_constraintLeft_toLeftOf="@+id/start_vertical_gl_fp"
+            app:layout_constraintStart_toStartOf="@+id/start_vertical_gl_fp"
+            app:layout_constraintTop_toBottomOf="@+id/profile_image_riv_fp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/primary_phone_number_tv_fp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8.6dp"
+            android:fontFamily="?attr/palphone_light_font"
+            android:textColor="?attr/palphone_main_title_text_color"
+            android:textSize="@dimen/thirty_three"
+            app:layout_constraintEnd_toEndOf="@id/end_vertical_gl_fp"
+            app:layout_constraintLeft_toLeftOf="@+id/start_vertical_gl_fp"
+            app:layout_constraintStart_toStartOf="@+id/start_vertical_gl_fp"
+            app:layout_constraintTop_toBottomOf="@+id/contact_name_tv_fp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/slogan_tv_fp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5.1dp"
+            android:fontFamily="?attr/palphone_light_font"
+            android:textColor="?attr/palphone_profile_info_text_color"
+            android:textDirection="ltr"
+            android:textSize="@dimen/normal_font_size"
+            app:layout_constraintEnd_toEndOf="@+id/end_vertical_gl_fp"
+            app:layout_constraintLeft_toLeftOf="@+id/start_vertical_gl_fp"
+            app:layout_constraintStart_toStartOf="@+id/start_vertical_gl_fp"
+            app:layout_constraintTop_toBottomOf="@+id/primary_phone_number_tv_fp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/birth_date_tv_fp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5.1dp"
+            android:fontFamily="?attr/palphone_light_font"
+            android:textColor="?attr/palphone_birthday_text_color"
+            android:textDirection="ltr"
+            android:textSize="@dimen/normal_font_size"
+            app:layout_constraintEnd_toEndOf="@+id/end_vertical_gl_fp"
+            app:layout_constraintLeft_toLeftOf="@+id/start_vertical_gl_fp"
+            app:layout_constraintStart_toStartOf="@+id/start_vertical_gl_fp"
+            app:layout_constraintTop_toBottomOf="@+id/slogan_tv_fp" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/personal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="birth_date_tv_fp,primary_phone_number_tv_fp,contact_name_tv_fp,slogan_tv_fp,national_id_fp,description_tv_fp"/>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/business"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="company_name_title_tv_fp,company_name_tv_fp,occupation_title_tv_fp,occupation_tv_fp,category_list_fp,registration_number_title_tv_fp,registration_number_tv_fp,economic_code_tv_fp,economic_code_fp,national_id_tv_fp,national_id_fp"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/company_name_title_tv_fp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="?attr/palphone_light_font"
+            android:text="@string/COMPANY_NAME"
+            android:textColor="?attr/palphone_sub_title_text_color"
+            android:textSize="@dimen/xlarge_font_size"
+            app:layout_constraintEnd_toEndOf="@+id/end_vertical_gl_fp"
+            app:layout_constraintLeft_toLeftOf="@+id/start_vertical_gl_fp"
+            app:layout_constraintStart_toStartOf="@+id/start_vertical_gl_fp"
+            app:layout_constraintTop_toBottomOf="@+id/birth_date_tv_fp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/company_name_tv_fp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="?attr/palphone_light_font"
+            android:textColor="?attr/palphone_profile_info_text_color"
+            android:textDirection="ltr"
+            android:textSize="@dimen/normal_font_size"
+            app:layout_constraintLeft_toLeftOf="@+id/profile_image_riv_fp"
+            app:layout_constraintStart_toStartOf="@+id/profile_image_riv_fp"
+            app:layout_constraintTop_toBottomOf="@+id/company_name_title_tv_fp"
+            tools:text="ماست ایران" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/occupation_title_tv_fp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="?attr/palphone_light_font"
+            android:text="@string/OCCUPATION"
+            android:textColor="?attr/palphone_sub_title_text_color"
+            android:textSize="@dimen/xlarge_font_size"
+            app:layout_constraintEnd_toEndOf="@+id/end_vertical_gl_fp"
+            app:layout_constraintLeft_toLeftOf="@+id/start_vertical_gl_fp"
+            app:layout_constraintStart_toStartOf="@+id/start_vertical_gl_fp"
+            app:layout_constraintTop_toBottomOf="@+id/company_name_tv_fp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/occupation_tv_fp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="?attr/palphone_light_font"
+            android:textColor="?attr/palphone_profile_info_text_color"
+            android:textDirection="ltr"
+            android:textSize="@dimen/normal_font_size"
+            app:layout_constraintEnd_toEndOf="@+id/end_vertical_gl_fp"
+            app:layout_constraintLeft_toLeftOf="@+id/profile_image_riv_fp"
+            app:layout_constraintStart_toStartOf="@+id/profile_image_riv_fp"
+            app:layout_constraintTop_toBottomOf="@+id/occupation_title_tv_fp"
+            tools:text="ماست بندی" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/category_list_fp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="@+id/end_vertical_gl_fp"
+            app:layout_constraintLeft_toLeftOf="@+id/profile_image_riv_fp"
+            app:layout_constraintStart_toStartOf="@+id/profile_image_riv_fp"
+            app:layout_constraintTop_toBottomOf="@+id/occupation_tv_fp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/registration_number_title_tv_fp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="?attr/palphone_light_font"
+            android:text="@string/REGISTRATION_NUMBER"
+            android:textColor="?attr/palphone_sub_title_text_color"
+            android:textSize="@dimen/xlarge_font_size"
+            app:layout_constraintEnd_toEndOf="@+id/end_vertical_gl_fp"
+            app:layout_constraintLeft_toLeftOf="@+id/start_vertical_gl_fp"
+            app:layout_constraintStart_toStartOf="@+id/start_vertical_gl_fp"
+            app:layout_constraintTop_toBottomOf="@+id/category_list_fp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/registration_number_tv_fp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="?attr/palphone_light_font"
+            android:textColor="?attr/palphone_profile_info_text_color"
+            android:textDirection="ltr"
+            android:textSize="@dimen/normal_font_size"
+            app:layout_constraintEnd_toEndOf="@+id/end_vertical_gl_fp"
+            app:layout_constraintLeft_toLeftOf="@+id/profile_image_riv_fp"
+            app:layout_constraintStart_toStartOf="@+id/profile_image_riv_fp"
+            app:layout_constraintTop_toBottomOf="@+id/registration_number_title_tv_fp"
+            tools:text="36521" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/economic_code_tv_fp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="?attr/palphone_light_font"
+            android:text="@string/ECONOMIC_CODE"
+            android:textColor="?attr/palphone_sub_title_text_color"
+            android:textSize="@dimen/xlarge_font_size"
+            app:layout_constraintEnd_toEndOf="@+id/end_vertical_gl_fp"
+            app:layout_constraintLeft_toLeftOf="@+id/start_vertical_gl_fp"
+            app:layout_constraintStart_toStartOf="@+id/start_vertical_gl_fp"
+            app:layout_constraintTop_toBottomOf="@+id/registration_number_tv_fp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/economic_code_fp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="?attr/palphone_light_font"
+            android:textColor="?attr/palphone_profile_info_text_color"
+            android:textDirection="ltr"
+            android:textSize="@dimen/normal_font_size"
+            app:layout_constraintEnd_toEndOf="@+id/end_vertical_gl_fp"
+            app:layout_constraintLeft_toLeftOf="@+id/profile_image_riv_fp"
+            app:layout_constraintStart_toStartOf="@+id/profile_image_riv_fp"
+            app:layout_constraintTop_toBottomOf="@+id/economic_code_tv_fp"
+            tools:text="689565644454545" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/national_id_tv_fp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="?attr/palphone_light_font"
+            android:text="@string/NOTIONAL_ID"
+            android:textColor="?attr/palphone_sub_title_text_color"
+            android:textSize="@dimen/xlarge_font_size"
+            app:layout_constraintEnd_toEndOf="@+id/end_vertical_gl_fp"
+            app:layout_constraintLeft_toLeftOf="@+id/start_vertical_gl_fp"
+            app:layout_constraintStart_toStartOf="@+id/start_vertical_gl_fp"
+            app:layout_constraintTop_toBottomOf="@+id/economic_code_fp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/national_id_fp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="?attr/palphone_light_font"
+            android:textColor="?attr/palphone_profile_info_text_color"
+            android:textDirection="ltr"
+            android:textSize="@dimen/normal_font_size"
+            app:layout_constraintEnd_toEndOf="@+id/end_vertical_gl_fp"
+            app:layout_constraintLeft_toLeftOf="@+id/profile_image_riv_fp"
+            app:layout_constraintStart_toStartOf="@+id/profile_image_riv_fp"
+            app:layout_constraintTop_toBottomOf="@+id/national_id_tv_fp"
+            tools:text="0046521154" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/description_tv_fp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:fontFamily="?attr/palphone_light_font"
+            android:maxLines="3"
+            android:textColor="?attr/palphone_profile_info_text_color"
+            android:textSize="@dimen/normal_font_size"
+            app:layout_constraintEnd_toEndOf="@+id/end_vertical_gl_fp"
+            app:layout_constraintLeft_toLeftOf="@+id/start_vertical_gl_fp"
+            app:layout_constraintStart_toStartOf="@+id/start_vertical_gl_fp"
+            app:layout_constraintTop_toBottomOf="@+id/national_id_fp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="50dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/description_tv_fp">
+
+            <ImageView
+                android:id="@+id/palphone_logo_iv_fp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/iv_logo_bizz_layout_marginStart"
+                android:layout_marginLeft="@dimen/iv_logo_bizz_layout_marginLeft"
+                android:layout_marginTop="@dimen/iv_logo_bizz_layout_marginTop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/palphone_logo"
+                android:contentDescription="@string/warning" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/pal_tv_fp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="?attr/palphone_light_font"
+                android:text="@string/pal"
+                android:textColor="?attr/palphone_profile_pal_text_color"
+                android:textSize="@dimen/tv_title_pal_textsize"
+                app:layout_constraintStart_toStartOf="@+id/palphone_logo_iv_fp"
+                app:layout_constraintTop_toBottomOf="@+id/palphone_logo_iv_fp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/phone_tv_fp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="?attr/palphone_semibold_font"
+                android:text="@string/PHONE"
+                android:textColor="?attr/palphone_profile_phone_text_color"
+                android:textSize="@dimen/tv_title_pal_textsize"
+                app:layout_constraintBottom_toBottomOf="@+id/pal_tv_fp"
+                app:layout_constraintStart_toEndOf="@+id/pal_tv_fp"
+                app:layout_constraintTop_toTopOf="@+id/pal_tv_fp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/easy_global_connection_tv_fp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="@dimen/tv_easyGlobal_layout_marginEnd"
+                android:layout_marginRight="@dimen/tv_easyGlobal_layout_marginRight"
+                android:fontFamily="?attr/palphone_semibold_font"
+                android:lineSpacingExtra="-7dp"
+                android:text="@string/EASY_GLOBAL_IDENTIFICATION"
+                android:textColor="?attr/palphone_egi_text_color"
+                android:textSize="@dimen/tv_easyGlobal_textSize"
+                app:layout_constraintStart_toStartOf="@+id/pal_tv_fp"
+                app:layout_constraintTop_toTopOf="@+id/pal_tv_fp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

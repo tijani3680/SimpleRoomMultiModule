@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_nav_graph"
+    app:startDestination="@id/LoginFragment">
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="app.lahzebar.features.login.LoginFragment"
+        android:label="Login Page"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_loginModeFragment"
+            app:destination="@id/ModeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ModeFragment"
+        android:name="app.lahzebar.features.mode.ModeFragment"
+        android:label="modeFragment"
+        tools:layout="@layout/fragment_mode">
+        <argument
+            android:name="PhoneNumber"
+            app:argType="string" />
+        <argument
+            android:name="Password"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_ModeFragment_to_PasswordLoginFragment"
+            app:destination="@id/PasswordLoginFragment" />
+        <action
+            android:id="@+id/action_ModeFragment_to_VerificationFragment"
+            app:destination="@id/VerificationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/PasswordLoginFragment"
+        android:name="app.lahzebar.features.pass.PasswordLoginFragment"
+        android:label="passwordLoginFragment" >
+        <argument
+            android:name="phoneNumber"
+            app:argType="string"/>
+        <argument
+            android:name="version"
+            app:argType="string"/>
+        <argument
+            android:name="deviceTitle"
+            app:argType="string"/>
+
+        <action
+            android:id="@+id/action_PasswordLoginFragment_to_RegisterFragment"
+            app:destination="@id/RegisterFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/VerificationFragment"
+        android:name="app.lahzebar.features.verification.VerificationFragment"
+        android:label="smsFragment"
+        tools:layout="@layout/fragment_verification">
+        <argument
+            android:name="VerificationAsCallType"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_VerificationFragment_to_RegisterFragment"
+            app:destination="@id/RegisterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/RegisterFragment"
+        android:name="app.lahzebar.features.register.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_RegisterFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="app.lahzebar.features.welcome.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" />
+</navigation>

@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/one_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:paddingBottom="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/two_layout"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/one_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="?attr/palphone_keypad_font"
+            android:includeFontPadding="false"
+            android:text="@string/pad_1"
+            android:textColor="?attr/palphone_keypad_number_color"
+            android:textSize="@dimen/palphone_keypad_numbers_textSize"
+            app:layout_constraintEnd_toEndOf="@id/one_layout"
+            app:layout_constraintStart_toStartOf="@id/one_layout"
+            app:layout_constraintTop_toTopOf="@id/one_layout"
+            tools:ignore="SpUsage" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="?attr/palphone_keypad_font"
+            android:text="@string/abc"
+            android:textColor="?attr/palphone_keypad_letters_text_color"
+            android:textSize="@dimen/tv_below_pad_size"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@id/one_tv"
+            app:layout_constraintStart_toStartOf="@id/one_tv"
+            app:layout_constraintTop_toTopOf="@id/one_tv"
+            tools:ignore="SpUsage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/two_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:paddingBottom="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/three_layout"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/one_layout"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/two_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="?attr/palphone_keypad_font"
+            android:includeFontPadding="false"
+            android:text="@string/pad_2"
+            android:textColor="?attr/palphone_keypad_number_color"
+            android:textSize="@dimen/palphone_keypad_numbers_textSize"
+            app:layout_constraintEnd_toEndOf="@id/two_layout"
+            app:layout_constraintStart_toStartOf="@id/two_layout"
+            app:layout_constraintTop_toTopOf="@id/two_layout"
+            tools:ignore="SpUsage" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="?attr/palphone_keypad_font"
+            android:text="@string/abc"
+            android:textColor="?attr/palphone_keypad_letters_text_color"
+            android:textSize="@dimen/tv_below_pad_size"
+            app:layout_constraintEnd_toEndOf="@id/two_tv"
+            app:layout_constraintStart_toStartOf="@id/two_tv"
+            app:layout_constraintTop_toTopOf="@id/two_tv"
+            tools:ignore="SpUsage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/three_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:paddingBottom="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/two_layout"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/three_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="?attr/palphone_keypad_font"
+            android:includeFontPadding="false"
+            android:text="@string/pad_3"
+            android:textColor="?attr/palphone_keypad_number_color"
+            android:textSize="@dimen/palphone_keypad_numbers_textSize"
+            app:layout_constraintEnd_toEndOf="@id/three_layout"
+            app:layout_constraintStart_toStartOf="@id/three_layout"
+            app:layout_constraintTop_toTopOf="@id/three_layout"
+            tools:ignore="SpUsage" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="?attr/palphone_keypad_font"
+            android:text="@string/def"
+            android:textColor="?attr/palphone_keypad_letters_text_color"
+            android:textSize="@dimen/tv_below_pad_size"
+            app:layout_constraintEnd_toEndOf="@id/three_tv"
+            app:layout_constraintStart_toStartOf="@id/three_tv"
+            app:layout_constraintTop_toTopOf="@id/three_tv"
+            tools:ignore="SpUsage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/four_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/five_layout"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="@id/one_layout"
+        app:layout_constraintTop_toBottomOf="@+id/one_layout">
+
+        <TextView
+            android:id="@+id/four_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="?attr/palphone_keypad_font"
+            android:includeFontPadding="false"
+            android:text="@string/pad_4"
+            android:textColor="?attr/palphone_keypad_number_color"
+            android:textSize="@dimen/palphone_keypad_numbers_textSize"
+            app:layout_constraintEnd_toEndOf="@id/four_layout"
+            app:layout_constraintStart_toStartOf="@id/four_layout"
+            app:layout_constraintTop_toTopOf="@id/four_layout"
+            tools:ignore="SpUsage" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="?attr/palphone_keypad_font"
+            android:text="@string/ghi"
+            android:textColor="?attr/palphone_keypad_letters_text_color"
+            android:textSize="@dimen/tv_below_pad_size"
+            app:layout_constraintEnd_toEndOf="@id/four_tv"
+            app:layout_constraintStart_toStartOf="@id/four_tv"
+            app:layout_constraintTop_toTopOf="@id/four_tv"
+            tools:ignore="SpUsage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/five_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/six_layout"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/four_layout"
+        app:layout_constraintTop_toBottomOf="@id/two_layout">
+
+        <TextView
+            android:id="@+id/five_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="?attr/palphone_keypad_font"
+            android:includeFontPadding="false"
+            android:text="@string/pad_5"
+            android:textColor="?attr/palphone_keypad_number_color"
+            android:textSize="@dimen/palphone_keypad_numbers_textSize"
+            app:layout_constraintEnd_toEndOf="@id/five_layout"
+            app:layout_constraintStart_toStartOf="@id/five_layout"
+            app:layout_constraintTop_toTopOf="@id/five_layout"
+            tools:ignore="SpUsage" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="?attr/palphone_keypad_font"
+            android:text="@string/jkl"
+            android:textColor="?attr/palphone_keypad_letters_text_color"
+            android:textSize="@dimen/tv_below_pad_size"
+            app:layout_constraintEnd_toEndOf="@id/five_tv"
+            app:layout_constraintStart_toStartOf="@id/five_tv"
+            app:layout_constraintTop_toTopOf="@id/five_tv"
+            tools:ignore="SpUsage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/six_layout"
+        android:layout_width="123dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/five_layout"
+        app:layout_constraintTop_toBottomOf="@id/three_layout">
+
+        <TextView
+            android:id="@+id/six_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="?attr/palphone_keypad_font"
+            android:includeFontPadding="false"
+            android:text="@string/pad_6"
+            android:textColor="?attr/palphone_keypad_number_color"
+            android:textSize="@dimen/palphone_keypad_numbers_textSize"
+            app:layout_constraintEnd_toEndOf="@id/six_layout"
+            app:layout_constraintStart_toStartOf="@id/six_layout"
+            app:layout_constraintTop_toTopOf="@id/six_layout"
+            tools:ignore="SpUsage" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="?attr/palphone_keypad_font"
+            android:text="@string/mno"
+            android:textColor="?attr/palphone_keypad_letters_text_color"
+            android:textSize="@dimen/tv_below_pad_size"
+            app:layout_constraintEnd_toEndOf="@id/six_tv"
+            app:layout_constraintStart_toStartOf="@id/six_tv"
+            app:layout_constraintTop_toTopOf="@id/six_tv"
+            tools:ignore="SpUsage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/seven_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/eight_layout"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/four_layout">
+
+        <TextView
+            android:id="@+id/seven_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="?attr/palphone_keypad_font"
+            android:includeFontPadding="false"
+            android:text="@string/pad_7"
+            android:textColor="?attr/palphone_keypad_number_color"
+            android:textSize="@dimen/palphone_keypad_numbers_textSize"
+            app:layout_constraintEnd_toEndOf="@id/seven_layout"
+            app:layout_constraintStart_toStartOf="@id/seven_layout"
+            app:layout_constraintTop_toTopOf="@id/seven_layout"
+            tools:ignore="SpUsage" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="?attr/palphone_keypad_font"
+            android:text="@string/pqrs"
+            android:textColor="?attr/palphone_keypad_letters_text_color"
+            android:textSize="@dimen/tv_below_pad_size"
+            app:layout_constraintEnd_toEndOf="@id/seven_tv"
+            app:layout_constraintStart_toStartOf="@id/seven_tv"
+            app:layout_constraintTop_toTopOf="@id/seven_tv"
+            tools:ignore="SpUsage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/eight_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/nine_layout"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/seven_layout"
+        app:layout_constraintTop_toBottomOf="@id/five_layout">
+
+        <TextView
+            android:id="@+id/eight_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="?attr/palphone_keypad_font"
+            android:includeFontPadding="false"
+            android:text="@string/pad_8"
+            android:textColor="?attr/palphone_keypad_number_color"
+            android:textSize="@dimen/palphone_keypad_numbers_textSize"
+            app:layout_constraintEnd_toEndOf="@id/eight_layout"
+            app:layout_constraintStart_toStartOf="@id/eight_layout"
+            app:layout_constraintTop_toTopOf="@id/eight_layout"
+            tools:ignore="SpUsage" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="?attr/palphone_keypad_font"
+            android:text="@string/tuv"
+            android:textColor="?attr/palphone_keypad_letters_text_color"
+            android:textSize="@dimen/tv_below_pad_size"
+            app:layout_constraintEnd_toEndOf="@id/eight_tv"
+            app:layout_constraintStart_toStartOf="@id/eight_tv"
+            app:layout_constraintTop_toTopOf="@id/eight_tv"
+            tools:ignore="SpUsage" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/nine_layout"
+        android:layout_width="123dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/eight_layout"
+        app:layout_constraintTop_toBottomOf="@id/six_layout">
+
+        <TextView
+            android:id="@+id/nine_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="?attr/palphone_keypad_font"
+            android:includeFontPadding="false"
+            android:text="@string/pad_9"
+            android:textColor="?attr/palphone_keypad_number_color"
+            android:textSize="@dimen/palphone_keypad_numbers_textSize"
+            app:layout_constraintEnd_toEndOf="@id/nine_layout"
+            app:layout_constraintStart_toStartOf="@id/nine_layout"
+            app:layout_constraintTop_toTopOf="@id/nine_layout"
+            tools:ignore="SpUsage" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="?attr/palphone_keypad_font"
+            android:text="@string/xyz"
+            android:textColor="?attr/palphone_keypad_letters_text_color"
+            android:textSize="@dimen/tv_below_pad_size"
+            app:layout_constraintEnd_toEndOf="@id/nine_tv"
+            app:layout_constraintStart_toStartOf="@id/nine_tv"
+            app:layout_constraintTop_toTopOf="@id/nine_tv"
+            tools:ignore="SpUsage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/star_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/zero_layout"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seven_layout">
+
+        <TextView
+            android:id="@+id/star_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="?attr/palphone_keypad_font"
+            android:includeFontPadding="false"
+            android:text="@string/pad_star"
+            android:textColor="?attr/palphone_keypad_number_color"
+            android:textSize="@dimen/palphone_keypad_numbers_textSize"
+            app:layout_constraintEnd_toEndOf="@id/star_layout"
+            app:layout_constraintStart_toStartOf="@id/star_layout"
+            app:layout_constraintTop_toTopOf="@id/star_layout"
+            tools:ignore="SpUsage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/zero_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/hashtag_layout"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/star_layout"
+        app:layout_constraintTop_toBottomOf="@id/eight_layout">
+
+        <TextView
+            android:id="@+id/zero_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="?attr/palphone_keypad_font"
+            android:includeFontPadding="false"
+            android:text="@string/pad_0"
+            android:textColor="?attr/palphone_keypad_number_color"
+            android:textSize="@dimen/palphone_keypad_numbers_textSize"
+            app:layout_constraintEnd_toEndOf="@id/zero_layout"
+            app:layout_constraintStart_toStartOf="@id/zero_layout"
+            app:layout_constraintTop_toTopOf="@id/zero_layout"
+            tools:ignore="SpUsage" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="?attr/palphone_keypad_font"
+            android:text="@string/pad_star"
+            android:textColor="?attr/palphone_keypad_letters_text_color"
+            android:textSize="@dimen/palphone_plus_sign_size"
+            app:layout_constraintEnd_toEndOf="@id/zero_tv"
+            app:layout_constraintStart_toStartOf="@id/zero_tv"
+            app:layout_constraintTop_toTopOf="@id/zero_tv"
+            tools:ignore="SpUsage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/hashtag_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/zero_layout"
+        app:layout_constraintTop_toBottomOf="@id/nine_layout">
+
+        <TextView
+            android:id="@+id/hashtag_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="?attr/palphone_keypad_font"
+            android:includeFontPadding="false"
+            android:text="@string/pad_sharp"
+            android:textColor="?attr/palphone_keypad_number_color"
+            android:textSize="@dimen/palphone_keypad_numbers_textSize"
+            app:layout_constraintEnd_toEndOf="@id/hashtag_layout"
+            app:layout_constraintStart_toStartOf="@id/hashtag_layout"
+            app:layout_constraintTop_toTopOf="@id/hashtag_layout"
+            tools:ignore="SpUsage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="SpUsage">
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/sms_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="verification_tv_fvvs,verification_sentence_tv_fvvs,sms_icon_shadow_iv_fvvs"/>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/call_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="verification_tv_fvvp,verification_sentence_tv_fvvp,phone_call_icon_shadow_iv_fvvp"/>
+    <ImageView
+        android:id="@+id/back_icon_iv_fvvs"
+        android:layout_width="30dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="@dimen/palphone_keypad_notification_icon_marginLeft"
+        android:layout_marginLeft="@dimen/palphone_keypad_notification_icon_marginLeft"
+        android:layout_marginTop="10dp"
+        android:adjustViewBounds="true"
+        android:padding="11dp"
+        android:src="@drawable/back_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/warning" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/verification_tv_fvvs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:fontFamily="?attr/palphone_semibold_font"
+        android:includeFontPadding="false"
+        android:text="@string/VERIFICATION_VIA_SMS"
+        android:textColor="?attr/palphone_verify_text_color"
+        android:textSize="@dimen/title_black_textsize"
+        app:layout_constraintBottom_toBottomOf="@+id/back_icon_iv_fvvs"
+        app:layout_constraintStart_toEndOf="@+id/back_icon_iv_fvvs"
+        app:layout_constraintTop_toTopOf="@+id/back_icon_iv_fvvs" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/verification_tv_fvvp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:fontFamily="?attr/palphone_semibold_font"
+        android:includeFontPadding="false"
+        android:text="@string/VERIFICATION_VIA_PHONE_CALL"
+        android:textColor="?attr/palphone_verify_text_color"
+        android:textSize="@dimen/title_black_textsize"
+        app:layout_constraintBottom_toBottomOf="@+id/back_icon_iv_fvvs"
+        app:layout_constraintStart_toEndOf="@+id/back_icon_iv_fvvs"
+        app:layout_constraintTop_toTopOf="@+id/back_icon_iv_fvvs" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/verification_sentence_tv_fvvs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="?attr/palphone_light_font"
+        android:text="@string/VERIFICATION_TEXT"
+        android:textColor="?attr/palphone_verify_text_color"
+        android:textSize="@dimen/login_text_size"
+        app:layout_constraintStart_toStartOf="@id/verification_tv_fvvs"
+        app:layout_constraintTop_toBottomOf="@+id/verification_tv_fvvs"
+        tools:layout_editor_absoluteY="215dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/verification_sentence_tv_fvvp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="?attr/palphone_light_font"
+        android:text="@string/ENTER_THE_CODE_YOU_RECEIVED"
+        android:textColor="?attr/palphone_verify_text_color"
+        android:textSize="@dimen/login_text_size"
+        app:layout_constraintStart_toStartOf="@id/verification_tv_fvvp"
+        app:layout_constraintTop_toBottomOf="@+id/verification_tv_fvvp"/>
+
+    <ImageView
+        android:id="@+id/sms_icon_shadow_iv_fvvs"
+        android:layout_width="99dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/sms_icon_verification"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/verification_sentence_tv_fvvs"
+        android:contentDescription="@string/warning"/>
+
+    <ImageView
+        android:id="@+id/phone_call_icon_shadow_iv_fvvp"
+        android:layout_width="79dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/phone_call_icon_verification"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/verification_sentence_tv_fvvp"
+        android:contentDescription="@string/warning"/>
+
+    <app.lahzebar.commons.util.PinEntryEditText2
+        android:id="@+id/pin_entry_et_fvvs"
+        android:layout_width="308dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dp"
+        android:background="@null"
+        android:cursorVisible="false"
+        android:digits="1234567890"
+        android:fontFamily="?attr/palphone_light_font"
+        android:inputType="number"
+        android:maxLength="6"
+        android:minHeight="60dp"
+        android:paddingHorizontal="3dp"
+        android:textColor="?attr/palphone_verification_code_color"
+        android:textIsSelectable="false"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline"
+        app:pinAnimationType="fromBottom"
+        app:pinBackgroundDrawable="@drawable/background_verification_code"
+        app:pinBackgroundIsSquare="true"
+        app:pinCharacterSpacing="4dp"
+        app:pinTextBottomPadding="16dp"
+        tools:ignore="SpUsage" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/verification_situation_tv_fvvs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:fontFamily="?attr/palphone_light_font"
+        android:text="@string/RESEND"
+        android:textColor="?attr/palphone_resend_text_color"
+        android:textSize="@dimen/login_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pin_entry_et_fvvs"
+        tools:layout_editor_absoluteY="215dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/verification_code_situation_tv_fv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:fontFamily="?attr/palphone_light_font"
+        android:textColor="?attr/palphone_verify_text_color"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pin_entry_et_fvvs"
+        tools:layout_editor_absoluteY="215dp"
+        tools:visibility="visible"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="223dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

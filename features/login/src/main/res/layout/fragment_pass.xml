@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="SpUsage">
+
+    <ImageView
+        android:id="@+id/back_icon"
+        android:layout_width="30dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="@dimen/palphone_keypad_notification_icon_marginLeft"
+        android:layout_marginLeft="@dimen/palphone_keypad_notification_icon_marginLeft"
+        android:layout_marginTop="10dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/warning"
+        android:padding="11dp"
+        android:src="@drawable/back_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:fontFamily="?attr/palphone_semibold_font"
+        android:includeFontPadding="false"
+        android:text="@string/LOGIN_WITH_PASSWORD"
+        android:textColor="?attr/palphone_verify_text_color"
+        android:textSize="@dimen/title_black_textsize"
+        app:layout_constraintBottom_toBottomOf="@+id/back_icon"
+        app:layout_constraintStart_toEndOf="@+id/back_icon"
+        app:layout_constraintTop_toTopOf="@+id/back_icon" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="?attr/palphone_light_font"
+        android:text="@string/ENTER_THE_PASSWORD_SENT_TO_YOU"
+        android:textColor="?attr/palphone_verify_text_color"
+        android:textSize="@dimen/login_text_size"
+        app:layout_constraintStart_toStartOf="@id/title"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <ImageView
+        android:id="@+id/lock_icon_shadow"
+        android:layout_width="96dp"
+        android:layout_height="108dp"
+        android:layout_marginTop="70dp"
+        android:contentDescription="@string/warning"
+        android:src="@drawable/lock_icon_verification"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/desc" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password_textfield_layout_fv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="70dp"
+        android:layoutDirection="ltr"
+        app:boxBackgroundMode="outline"
+        app:endIconMode="password_toggle"
+        app:endIconTint="?attr/palphone_password_icon_tint_color"
+        app:errorTextAppearance="@style/ERROR_TEXT_APPEARANCE"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lock_icon_shadow">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/pass_et"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/edittext_background_password_verification"
+            android:fontFamily="?attr/palphone_light_font"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:paddingHorizontal="15dp"
+            android:textColor="?attr/palphone_verify_text_color"
+            android:textCursorDrawable="?attr/palphone_cursor"
+            android:textSize="@dimen/large_font_size"
+            app:layout_constraintTop_toBottomOf="@+id/lock_icon_shadow_iv_fv" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/continue_button_fv"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="38dp"
+        android:background="@drawable/verification_button_background"
+        android:fontFamily="?attr/palphone_semibold_font"
+        android:includeFontPadding="false"
+        android:text="@string/CONTINUE"
+        android:textAllCaps="false"
+        android:textColor="?attr/palphone_button_text_color"
+        android:textSize="14dp"
+        app:backgroundTint="@color/palphone_hippie_blue"
+        app:layout_constraintEnd_toEndOf="@+id/password_textfield_layout_fv"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/password_textfield_layout_fv"
+        app:layout_constraintTop_toBottomOf="@+id/password_textfield_layout_fv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

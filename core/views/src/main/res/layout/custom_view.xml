@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/custome_view"
+    style="@style/CustomeToast"
+    android:layout_height="80dp">
+
+    <ImageView
+        android:id="@+id/icon_group"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="30dp"
+        android:contentDescription="@string/appbar_scrolling_view_behavior"
+       />
+
+
+    <TextView
+        android:id="@+id/tv_customeToast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@+id/icon_group"
+        android:text="@string/appbar_scrolling_view_behavior"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+</RelativeLayout>

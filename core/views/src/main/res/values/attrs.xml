@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <attr name="progressbar_start_and_center_color" format="color" />
+    <declare-styleable name="ProgressButton">
+        <attr name="text" format="string" />
+        <attr name="loading" format="boolean" />
+        <attr name="enabled" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="AmiraliImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_circle_background_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="DotProgressBar">
+        <attr name="color" format="color" />
+        <attr name="count" format="integer" />
+        <attr name="timeout" format="integer" />
+    </declare-styleable>
+    <!--    Palphone Keypad Attributes-->
+    <attr name="palphone_keypad_font" format="float"/>
+    <attr name="palphone_keypad_letters_font" format="float"/>
+    <attr name="palphone_keypad_number_color" format="color"/>
+    <attr name="palphone_keypad_selected_phone_number_color" format="color"/>
+    <attr name="palphone_keypad_text_color" format="color"/>
+    <attr name="palphone_keypad_star_color" format="color"/>
+    <attr name="palphone_keypad_letters_text_color" format="color"/>
+</resources>

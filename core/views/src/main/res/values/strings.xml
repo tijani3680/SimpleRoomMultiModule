@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--KEYPAD-->
+    <string name="pad_1">1</string>
+    <string name="pad_2">2</string>
+    <string name="pad_3">3</string>
+    <string name="pad_4">4</string>
+    <string name="pad_5">5</string>
+    <string name="pad_6">6</string>
+    <string name="pad_7">7</string>
+    <string name="pad_8">8</string>
+    <string name="pad_9">9</string>
+    <string name="pad_0">0</string>
+    <string name="pad_star">*</string>
+    <string name="pad_sharp">#</string>
+    <string name="abc">ABC</string>
+    <string name="def">DEF</string>
+    <string name="ghi">GHI</string>
+    <string name="jkl">JKL</string>
+    <string name="mno">MNO</string>
+    <string name="pqrs">PQRS</string>
+    <string name="tuv">TUV</string>
+    <string name="xyz">XYZ</string>
+    <string name="pad_plus">+</string>
+</resources>

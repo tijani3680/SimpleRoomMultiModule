@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="SpUsage">
+
+        <ImageView
+            android:id="@+id/palphone_logo_fr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="37dp"
+            android:layout_marginLeft="37dp"
+            android:layout_marginTop="56dp"
+            android:background="@drawable/palphone_logo"
+            android:contentDescription="@string/warning"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/pal_tv_fr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="?attr/palphone_semibold_font"
+            android:text="@string/pal"
+            android:textColor="?attr/palphone_registration_pal_text_color"
+            android:textSize="@dimen/xxxlarge_font_size"
+            app:layout_constraintStart_toStartOf="@+id/palphone_logo_fr"
+            app:layout_constraintTop_toBottomOf="@+id/palphone_logo_fr" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/phone_tv_fr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="?attr/palphone_semibold_font"
+            android:text="@string/PHONE"
+            android:textColor="?attr/palphone_profile_phone_text_color"
+            android:textSize="@dimen/xxxlarge_font_size"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/pal_tv_fr"
+            app:layout_constraintTop_toBottomOf="@+id/palphone_logo_fr" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_fr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:checked="true"
+            android:fontFamily="?attr/palphone_light_font"
+            android:switchMinWidth="56dp"
+            android:text="@string/PERSONAL"
+            android:textColor="@color/palphone_madison"
+            android:theme="@style/FirstStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phone_tv_fr" />
+
+        <View
+            android:id="@+id/registration_done_layout_fr"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="17dp"
+            android:background="@drawable/dialog_background_field"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switch_fr" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/registration_tv_fr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginLeft="36dp"
+            android:fontFamily="?attr/palphone_light_font"
+            android:includeFontPadding="false"
+            android:text="@string/REGISTRATION"
+            android:textColor="@color/palphone_white"
+            android:textSize="@dimen/xlarge_font_size"
+            app:layout_constraintBottom_toBottomOf="@+id/registration_done_layout_fr"
+            app:layout_constraintStart_toStartOf="@+id/registration_done_layout_fr"
+            app:layout_constraintTop_toTopOf="@+id/registration_done_layout_fr" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/done_tv_fr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="33dp"
+            android:layout_marginRight="33dp"
+            android:fontFamily="?attr/palphone_light_font"
+            android:includeFontPadding="false"
+            android:text="@string/done"
+            android:textColor="@color/palphone_white"
+            android:textSize="@dimen/xlarge_font_size"
+            app:layout_constraintBottom_toBottomOf="@+id/registration_done_layout_fr"
+            app:layout_constraintEnd_toEndOf="@+id/registration_done_layout_fr"
+            app:layout_constraintTop_toTopOf="@+id/registration_done_layout_fr" />
+
+
+        <app.lahzebar.commons.util.JustifiedTextView
+            android:id="@+id/description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:fontFamily="?attr/palphone_light_font"
+            android:lineSpacingExtra="5dp"
+            android:textColor="?attr/palphone_edit_section_title_color"
+            android:textSize="@dimen/normal_font_size"
+            app:layout_constraintEnd_toEndOf="@+id/registration_done_layout_fr"
+            app:layout_constraintStart_toStartOf="@+id/registration_done_layout_fr"
+            app:layout_constraintTop_toBottomOf="@+id/registration_done_layout_fr" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/information_tv_fr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/description"
+            android:layout_marginStart="60dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="50dp"
+            android:fontFamily="?attr/palphone_medium_font"
+            android:text="@string/INFORMATION"
+            android:textColor="?attr/palphone_edit_section_title_color"
+            android:textSize="@dimen/normal_font_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/description" />
+
+        <RelativeLayout
+            android:id="@+id/dialog_box_business"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/information_tv_fr"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="30dp"
+            android:background="@drawable/dialog_background_field"
+            android:paddingBottom="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/information_tv_fr">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/company_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/txtCompanyName_layout_marginStart"
+                android:layout_marginLeft="@dimen/txtCompanyName_layout_marginLeft"
+                android:layout_marginTop="@dimen/txtCompanyName_layout_marginTop"
+                android:fontFamily="?attr/palphone_light_font"
+                android:text="@string/COMPANY_NAME"
+                android:textColor="?attr/palphone_title_box_text_color"
+                android:textSize="@dimen/txtCompanyName_textSize" />
+
+            <app.lahzebar.commons.util.CustomEditText
+                android:id="@+id/company_name_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/company_name"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/edittext_background"
+                android:fontFamily="?attr/palphone_light_font"
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:textColor="@color/palphone_white"
+                android:textCursorDrawable="@drawable/cursor_dark"
+                android:textSize="@dimen/edt_textsize" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/slogan_tv_fep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/company_name_et"
+                android:layout_marginStart="@dimen/txtCompanyName_layout_marginStart"
+                android:layout_marginLeft="@dimen/txtCompanyName_layout_marginLeft"
+                android:layout_marginTop="30dp"
+                android:fontFamily="?attr/palphone_light_font"
+                android:text="@string/SLOGAN"
+                android:textColor="?attr/palphone_title_box_text_color"
+                android:textSize="@dimen/txtCompanyName_textSize" />
+
+            <app.lahzebar.commons.util.CustomEditText
+                android:id="@+id/slogan_et_fep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/slogan_tv_fep"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/edittext_background"
+                android:fontFamily="?attr/palphone_light_font"
+                android:singleLine="true"
+                android:textColor="?attr/palphone_third_text_color"
+                android:textCursorDrawable="@drawable/cursor_dark"
+                android:textSize="@dimen/edt_textsize" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/dialog_box_personal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/information_tv_fr"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="30dp"
+            android:background="@drawable/dialog_background_field"
+            android:paddingBottom="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/information_tv_fr">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/first_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/txtCompanyName_layout_marginStart"
+                android:layout_marginLeft="@dimen/txtCompanyName_layout_marginLeft"
+                android:layout_marginTop="@dimen/txtCompanyName_layout_marginTop"
+                android:fontFamily="?attr/palphone_light_font"
+                android:text="@string/FIRST_NAME"
+                android:textColor="?attr/palphone_title_box_text_color"
+                android:textSize="@dimen/txtCompanyName_textSize" />
+
+            <app.lahzebar.commons.util.CustomEditText
+                android:id="@+id/first_name_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/first_name"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/edittext_background"
+                android:fontFamily="?attr/palphone_light_font"
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:textColor="@color/palphone_white"
+                android:textCursorDrawable="@drawable/cursor_dark"
+                android:textSize="@dimen/edt_textsize" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/last_name_tv_fr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/first_name_et"
+                android:layout_marginStart="@dimen/txtCompanyName_layout_marginStart"
+                android:layout_marginLeft="@dimen/txtCompanyName_layout_marginLeft"
+                android:layout_marginTop="@dimen/txtCompanyName_layout_marginTop"
+                android:fontFamily="?attr/palphone_light_font"
+                android:text="@string/LAST_NAME"
+                android:textColor="?attr/palphone_title_box_text_color"
+                android:textSize="@dimen/txtCompanyName_textSize" />
+
+            <app.lahzebar.commons.util.CustomEditText
+                android:id="@+id/last_name_et_fr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/last_name_tv_fr"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:autofillHints="name"
+                android:background="@drawable/edittext_background"
+                android:colorControlActivated="@color/bermuda_grey"
+                android:colorControlHighlight="@color/bermuda_grey"
+                android:colorControlNormal="@color/bermuda_grey"
+                android:fontFamily="?attr/palphone_light_font"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColor="@color/palphone_white"
+                android:textCursorDrawable="@drawable/cursor_dark"
+                android:textSize="@dimen/edt_textsize" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/date_of_birth_tv_fr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/last_name_et_fr"
+                android:layout_marginStart="@dimen/txtCompanyName_layout_marginStart"
+                android:layout_marginLeft="@dimen/txtCompanyName_layout_marginLeft"
+                android:layout_marginTop="@dimen/txtCompanyName_layout_marginTop"
+                android:fontFamily="?attr/palphone_light_font"
+                android:text="@string/DATE_OF_BIRTH"
+                android:textColor="?attr/palphone_title_box_text_color"
+                android:textSize="@dimen/txtCompanyName_textSize" />
+
+            <DatePicker
+                android:id="@+id/birth_date_picker_fr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/date_of_birth_tv_fr"
+                android:layout_marginHorizontal="30dp"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                android:theme="@style/palphone_date_picker" />
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.lahzebar.features.contacts.continer.ContactFragment">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_menu_icon"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="@dimen/rtl_search_marginTop"
+        android:layout_marginEnd="@dimen/palphone_keypad_menu_icon_marginRight"
+        android:layout_marginRight="@dimen/palphone_keypad_menu_icon_marginRight"
+        android:src="@drawable/menu_default_profile_icon_light"
+        app:civ_border_color="@color/transparent"
+        app:civ_border_overlay="false"
+        app:civ_border_width="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_back_icon"
+        android:layout_width="30dp"
+        android:layout_height="33dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/palphone_keypad_notification_icon_marginLeft"
+        android:layout_marginLeft="@dimen/palphone_keypad_notification_icon_marginLeft"
+        android:layout_marginTop="@dimen/rtl_search_marginTop"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/back_icon_content"
+        android:padding="11dp"
+        android:src="@drawable/back_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_search_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:contentDescription="@string/search_icon_content"
+        android:src="@drawable/search_icon"
+        android:translationZ="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_menu_icon"
+        app:layout_constraintStart_toStartOf="@+id/et_search"
+        app:layout_constraintTop_toTopOf="@+id/iv_menu_icon" />
+
+    <EditText
+        android:id="@+id/et_search"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/edt_search_layout_height"
+        android:layout_marginHorizontal="15dp"
+        android:autofillHints=""
+        android:background="@drawable/search_layout_background"
+        android:ems="10"
+        android:fontFamily="?attr/palphone_light_font"
+        android:hint="@string/SEARCH"
+        android:imeOptions="actionSearch"
+        android:includeFontPadding="false"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/edt_search_paddingLeft"
+        android:paddingRight="@dimen/edt_search_paddingRight"
+        android:textColor="?attr/palphone_edittext_text_color"
+        android:textColorHint="?attr/palphone_edittext_hint_text_color"
+        android:textCursorDrawable="?attr/palphone_cursor"
+        android:textDirection="ltr"
+        android:textSize="@dimen/large_font_size"
+        android:theme="@style/SecondStyle"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_menu_icon"
+        app:layout_constraintEnd_toStartOf="@+id/iv_menu_icon"
+        app:layout_constraintStart_toEndOf="@+id/iv_back_icon"
+        app:layout_constraintTop_toTopOf="@+id/iv_menu_icon"
+        tools:ignore="SpUsage" />
+
+    <com.google.android.material.tabs.TabLayout
+       android:id="@+id/tab_layout_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/et_search"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="?attr/palphone_history_tab_bar"
+        app:tabIndicatorHeight="5dp"
+        app:tabMode="fixed"
+        app:tabTextAppearance="@style/MyCustomTabText"
+        app:tabTextColor="?attr/palphone_fourth_text_color" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager_contact"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tab_layout_contact" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

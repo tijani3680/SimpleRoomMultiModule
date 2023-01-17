@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout_fl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="SpUsage">
+
+    <ImageView
+        android:id="@+id/login_icon_iv_fl"
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:contentDescription="@string/warning"
+        android:src="?attr/palphone_login_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/login_tv_fl"
+        app:layout_constraintStart_toStartOf="@+id/login_description_tv_fl"
+        app:layout_constraintTop_toTopOf="@+id/login_tv_fl" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/login_tv_fl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/login_icon_iv_fl"
+        android:fontFamily="?attr/palphone_semibold_font"
+        android:includeFontPadding="false"
+        android:text="@string/login"
+        android:textColor="?attr/palphone_fourth_text_color"
+        android:textSize="@dimen/palphone_login_textview_size"
+        app:layout_constraintStart_toEndOf="@+id/login_icon_iv_fl"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <app.lahzebar.commons.util.JustifiedTextView
+        android:id="@+id/login_description_tv_fl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:fontFamily="?attr/palphone_regular_font"
+        android:text="@string/you_accept_our_privacy_policy"
+        android:textColor="?attr/palphone_fourth_text_color"
+        android:textSize="@dimen/palphone_login_justified_textview_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_tv_fl" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/phone_number_tv_fl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="100dp"
+        android:fontFamily="?attr/palphone_medium_font"
+        android:includeFontPadding="false"
+        android:text="@string/PHONE_NUMBER"
+        android:textColor="?attr/palphone_fourth_text_color"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_description_tv_fl" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="33dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/background_login_phone_number"
+        android:paddingLeft="20dp"
+        app:boxBackgroundMode="outline"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone_number_tv_fl">
+
+        <app.lahzebar.commons.util.CustomEditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#00000000"
+            android:fontFamily="?attr/palphone_light_font"
+            android:hint="@string/enter_phone_number"
+            android:includeFontPadding="false"
+            android:inputType="phone"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:textAlignment="gravity"
+            android:textColor="?attr/palphone_five_text_color"
+            android:textColorHint="?attr/palphone_login_box_hint"
+            android:textCursorDrawable="@drawable/cursor_light"
+            android:textSize="@dimen/palphone_login_edittext_size" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <LinearLayout
+        android:id="@+id/button_layout_fl"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="33dp"
+        android:layout_marginTop="38dp"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/textField">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login_button_fl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/alert_dialog_button_background3"
+            android:fontFamily="?attr/palphone_semibold_font"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:padding="1dp"
+            android:text="@string/NEXT"
+            android:textColor="?attr/palphone_button_text_color"
+            android:textSize="@dimen/login_text_size"
+            app:backgroundTint="@color/button_background_tint" />
+        <!--                        android:onClick="@{()->loginViewModel.nextClicked()}"-->
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

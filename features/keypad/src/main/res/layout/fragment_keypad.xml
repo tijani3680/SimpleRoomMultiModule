@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_keypad"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".KeypadFragment">
+
+    <ImageView
+        android:id="@+id/back_icon_iv_fk"
+        android:layout_width="@dimen/btnBack_width"
+        android:layout_height="@dimen/btnBack_height"
+        android:layout_gravity="start"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp"
+        android:background="@null"
+        android:contentDescription="@string/back_icon"
+        android:src="@drawable/back_icon"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/menu_profile_image"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="@dimen/rtl_search_marginTop"
+        android:layout_marginEnd="@dimen/palphone_keypad_menu_icon_marginRight"
+        android:src="@drawable/menu_default_profile_icon_light"
+        app:civ_border_color="@color/transparent"
+        app:civ_border_overlay="false"
+        app:civ_border_width="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/search_et_fk"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/search_et_fk"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/edt_search_layout_height"
+        android:layout_marginStart="15.5dp"
+        android:layout_marginLeft="@dimen/palphone_keypad_search_layout_marginRight"
+        android:layout_marginTop="@dimen/rtl_search_marginTop"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="@dimen/palphone_keypad_search_layout_marginLeft"
+        android:autofillHints=""
+        android:background="@drawable/search_layout_background"
+        android:ems="10"
+        android:fontFamily="?attr/palphone_light_font"
+        android:hint="@string/SEARCH"
+        android:imeOptions="actionSearch"
+        android:includeFontPadding="false"
+        android:inputType="text"
+        android:layoutDirection="ltr"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/edt_search_paddingLeft"
+        android:paddingRight="@dimen/edt_search_paddingRight"
+        android:textColor="?attr/palphone_edittext_text_color"
+        android:textColorHint="?attr/palphone_edittext_hint_text_color"
+        android:textCursorDrawable="?attr/palphone_cursor"
+        android:textDirection="ltr"
+        android:textSize="@dimen/large_font_size"
+        android:theme="@style/SecondStyle"
+        app:layout_constraintEnd_toStartOf="@+id/menu_profile_image"
+        app:layout_constraintStart_toEndOf="@+id/notification_icon_iv_fk"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpUsage" />
+
+    <ImageView
+        android:id="@+id/search_icon_iv_fk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:contentDescription="@string/search_icon_description"
+        android:src="@drawable/search_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/search_et_fk"
+        app:layout_constraintStart_toStartOf="@+id/search_et_fk"
+        app:layout_constraintTop_toTopOf="@+id/search_et_fk" />
+
+    <ImageView
+        android:id="@+id/notification_icon_iv_fk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/palphone_keypad_notification_icon_marginLeft"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/notification_icon_description"
+        android:padding="5dp"
+        android:src="?attr/palphone_notification_icon"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/search_et_fk"
+        app:layout_constraintEnd_toStartOf="@+id/search_et_fk"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/search_et_fk" />
+
+    <ImageView
+        android:id="@+id/add_contact_icon_iv_fk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_right_ic_menu"
+        android:layout_marginTop="10dp"
+        android:clickable="false"
+        android:contentDescription="@string/add_contact_icon_description"
+        android:src="?attr/palphone_add_contact_icon"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_et_fk" />
+
+    <TextView
+        android:id="@+id/add_contact_tv_fk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/add_contact_icon_iv_fk"
+        android:layout_marginStart="@dimen/palphone_add_contact_margin_start"
+        android:layout_marginLeft="@dimen/palphone_add_contact_margin_start"
+        android:layout_marginTop="3dp"
+        android:clickable="false"
+        android:fontFamily="?attr/palphone_light_font"
+        android:text="@string/ADD_TO_CONTACTS"
+        android:textColor="?attr/palphone_add_contact_text_color"
+        android:textSize="@dimen/txtCompanyName_textSize"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/add_contact_icon_iv_fk"
+        app:layout_constraintStart_toEndOf="@+id/add_contact_icon_iv_fk"
+        app:layout_constraintTop_toTopOf="@+id/add_contact_icon_iv_fk"
+        tools:ignore="SpUsage" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/found_phone_numbers_rv_fk"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/palphone_transparent"
+        android:overScrollMode="never"
+        android:paddingTop="10dp"
+        android:scrollbarSize="4dp"
+        android:scrollbarThumbVertical="?attr/palphone_scrollbar_thumb_color"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@+id/phone_number_et_fk"
+        app:layout_constraintTop_toBottomOf="@+id/add_contact_icon_iv_fk" />
+
+    <core.views.views.FontFitEditText
+        android:id="@+id/phone_number_et_fk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginBottom="5dp"
+        android:background="@null"
+        android:fontFamily="?attr/palphone_keypad_font"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:inputType="phone"
+        android:maxLength="24"
+        android:paddingStart="58dp"
+        android:paddingLeft="58dp"
+        android:singleLine="true"
+        android:textColor="?attr/palphone_keypad_selected_phone_number_color"
+        android:textSize="@dimen/keypad_phone_number_et_text_size"
+        android:theme="@style/SecondStyle"
+        app:layout_constraintBottom_toTopOf="@+id/keypad_view_fk"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpUsage"
+        tools:text="0" />
+
+    <ImageView
+        android:id="@+id/clear_phone_number_icon_iv_fk"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:contentDescription="@string/pad_star"
+        android:padding="14dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/keypad_view_fk"
+        app:srcCompat="?attr/palphone_close_icon"
+        tools:ignore="VectorDrawableCompat" />
+
+    <View
+        android:id="@+id/keypad_view_fk"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?attr/palphone_line_color"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/active_keypad_fk" />
+
+    <core.views.views.CustomKeypad
+        android:id="@+id/active_keypad_fk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ImageView
+        android:id="@+id/btn_dial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:contentDescription="@string/pad_star"
+        android:src="?attr/palphone_dialing_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

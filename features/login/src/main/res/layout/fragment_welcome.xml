@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/Welcome"
+    tools:context="app.lahzebar.features.welcome.WelcomeFragment">
+
+    <ImageView
+        android:id="@+id/palphone_logo_iv_fw"
+        android:layout_width="275dp"
+        android:layout_height="275dp"
+        android:alpha="0.2"
+        android:src="@drawable/palphone_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/warning" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/palphone_logo_iv_fw"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/palphone_logo_iv_fw" >
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/welcome_tv_fw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="?attr/palphone_semibold_font"
+            android:text="@string/WELCOME_TO"
+            android:textColor="?attr/palphone_welcome_text_color"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/pal_tv_fw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="?attr/palphone_semibold_font"
+            android:text="@string/pal"
+            android:textColor="?attr/palphone_pal_text_color_welcome"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/welcome_tv_fw"
+            app:layout_constraintTop_toTopOf="@+id/welcome_tv_fw"
+            app:layout_constraintBottom_toBottomOf="@id/welcome_tv_fw"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/phone_tv_fw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:fontFamily="?attr/palphone_semibold_font"
+            android:text="@string/PHONE"
+            android:textColor="?attr/palphone_welcome_text_color"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/pal_tv_fw"
+            app:layout_constraintTop_toTopOf="@+id/pal_tv_fw" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/success_tv_fw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="?attr/palphone_medium_font"
+            android:text="@string/SUCCESSFULLY_REGISTERED"
+            android:textColor="?attr/palphone_welcome_text_color"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pal_tv_fw" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/start_button_fw"
+        android:layout_width="@dimen/width_btn"
+        android:layout_height="@dimen/button_height"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/distance_btn_to_the_bottom"
+        android:background="@drawable/alert_dialog_button_background"
+        app:backgroundTint="?attr/palphone_button_background_color"
+        android:fontFamily="?attr/palphone_medium_font"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:padding="1dp"
+        android:minHeight="0dp"
+        android:text="@string/START_USING"
+        android:textColor="?attr/palphone_button_text_color"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

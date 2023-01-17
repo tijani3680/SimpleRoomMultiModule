@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="SpUsage">
+
+    <ImageView
+        android:id="@+id/login_icon_iv_fl"
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:contentDescription="@string/warning"
+        android:src="?attr/palphone_login_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/login_tv_fl"
+        app:layout_constraintStart_toStartOf="@+id/login_description_tv_fl"
+        app:layout_constraintTop_toTopOf="@+id/login_tv_fl" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/login_tv_fl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/login_icon_iv_fl"
+        android:fontFamily="?attr/palphone_semibold_font"
+        android:includeFontPadding="false"
+        android:text="@string/login"
+        android:textColor="?attr/palphone_fourth_text_color"
+        android:textSize="@dimen/palphone_login_textview_size"
+        app:layout_constraintStart_toEndOf="@+id/login_icon_iv_fl"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <app.lahzebar.commons.util.JustifiedTextView
+        android:id="@+id/login_description_tv_fl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:fontFamily="?attr/palphone_regular_font"
+        android:text="@string/ENTER_YOUR_PHONE_NUMBER"
+        android:textColor="?attr/palphone_fourth_text_color"
+        android:textSize="@dimen/palphone_login_justified_textview_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_tv_fl" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/phoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="37dp"
+        android:layout_marginTop="133dp"
+        android:background="@drawable/alert_dialog_button_background2"
+        android:fontFamily="?attr/palphone_regular_font"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:paddingStart="16dp"
+        android:textColor="?attr/palphone_fourth_text_color"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_description_tv_fl"
+        tools:text="+844 8153772" />
+
+    <TextView
+        android:id="@+id/wrong_number_tv_flm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:paddingBottom="10dp"
+        android:paddingHorizontal="10dp"
+        android:fontFamily="?attr/palphone_light_font"
+        android:text="@string/WRONG_NUMBER"
+        android:textColor="?attr/palphone_wrong_number"
+        android:textSize="@dimen/normal_font_size"
+        app:layout_constraintStart_toStartOf="@+id/phoneNumber"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumber" />
+
+    <View
+        android:id="@+id/sms_type_click"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginHorizontal="30dp"
+        android:translationZ="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/sms_type"
+        app:layout_constraintTop_toTopOf="@+id/sms_type" />
+    <View
+        android:id="@+id/call_type_click"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginHorizontal="30dp"
+        android:translationZ="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/call_type"
+        app:layout_constraintTop_toTopOf="@+id/call_type" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/pass_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="password_tv,password_type,password_iv,password_tv_des,password_type_click"/>
+    <View
+        android:id="@+id/password_type_click"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginHorizontal="30dp"
+        android:translationZ="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/password_type"
+        app:layout_constraintTop_toTopOf="@+id/password_type" />
+
+    <View
+        android:id="@+id/sms_type"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="37dp"
+        android:layout_marginTop="133dp"
+        android:background="@drawable/background_login"
+        android:elevation="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumber" />
+
+    <ImageView
+        android:id="@+id/sms_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/sms_icon_login"
+        android:elevation="11dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/sms_type"
+        app:layout_constraintStart_toStartOf="@+id/sms_type"
+        app:layout_constraintTop_toTopOf="@+id/sms_type"
+        android:contentDescription="@string/warning" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/sms_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="?attr/palphone_medium_font"
+        android:includeFontPadding="false"
+        android:text="@string/SMS"
+        android:elevation="11dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:textColor="@color/palphone_white"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/sms_type"
+        app:layout_constraintStart_toStartOf="@+id/sms_type"
+        app:layout_constraintTop_toTopOf="@+id/sms_type" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="?attr/palphone_light_font"
+        android:includeFontPadding="false"
+        android:text="@string/SEND_VERIFICATION_CODE_TO_YOUR_PHONE"
+        android:textColor="#80FFFFFF"
+        android:textSize="11dp"
+        android:elevation="11dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/sms_type"
+        app:layout_constraintEnd_toEndOf="@+id/sms_type"
+        app:layout_constraintTop_toTopOf="@+id/sms_type" />
+
+    <View
+        android:id="@+id/call_type"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="37dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_login"
+        android:elevation="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sms_type" />
+
+    <ImageView
+        android:id="@+id/call_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/phone_call_icon_login"
+        android:elevation="11dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/call_type"
+        app:layout_constraintStart_toStartOf="@+id/call_type"
+        app:layout_constraintTop_toTopOf="@+id/call_type"
+        android:contentDescription="@string/warning" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/call_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="?attr/palphone_medium_font"
+        android:includeFontPadding="false"
+        android:text="@string/CALL"
+        android:elevation="11dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:textColor="@color/palphone_white"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/call_type"
+        app:layout_constraintStart_toStartOf="@+id/call_type"
+        app:layout_constraintTop_toTopOf="@+id/call_type" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="?attr/palphone_light_font"
+        android:includeFontPadding="false"
+        android:text="@string/MAKE_A_CALL_WITH_YOUR_PHONE"
+        android:textColor="#80FFFFFF"
+        android:textSize="11dp"
+        android:elevation="11dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/call_type"
+        app:layout_constraintEnd_toEndOf="@+id/call_type"
+        app:layout_constraintTop_toTopOf="@+id/call_type" />
+    <View
+        android:id="@+id/password_type"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="37dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_login"
+        android:elevation="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/call_type" />
+
+    <ImageView
+        android:id="@+id/password_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/lock_icon_login"
+        android:elevation="11dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/password_type"
+        app:layout_constraintStart_toStartOf="@+id/password_type"
+        app:layout_constraintTop_toTopOf="@+id/password_type"
+        android:contentDescription="@string/warning" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/password_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="?attr/palphone_medium_font"
+        android:includeFontPadding="false"
+        android:text="@string/PASSWORD"
+        android:elevation="11dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:textColor="@color/palphone_white"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/password_type"
+        app:layout_constraintStart_toStartOf="@+id/password_type"
+        app:layout_constraintTop_toTopOf="@+id/password_type" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/password_tv_des"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="?attr/palphone_light_font"
+        android:includeFontPadding="false"
+        android:text="@string/LOGIN_WITH_PASSWORD"
+        android:textColor="#80FFFFFF"
+        android:textSize="11dp"
+        android:elevation="11dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/password_type"
+        app:layout_constraintEnd_toEndOf="@+id/password_type"
+        app:layout_constraintTop_toTopOf="@+id/password_type" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

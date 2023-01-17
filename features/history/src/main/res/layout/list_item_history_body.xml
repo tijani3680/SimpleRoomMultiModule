@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            app:layout_constraintEnd_toEndOf="@+id/layout_call_time"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_contact_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/default_profile_image_circular_border_dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="5dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginHorizontal="10dp"
+            android:layout_weight=".55"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_contact_image">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_contact_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="?attr/palphone_semibold_font"
+                    android:includeFontPadding="false"
+                    android:textColor="?attr/palphone_fourth_text_color"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:textSize="@dimen/large_font_size"
+                    app:layout_constraintStart_toEndOf="@+id/contact_image_iv_lihb"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="SpUsage" />
+
+                <RelativeLayout
+                    android:id="@+id/layout_number_of_call"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginLeft="6dp"
+                    android:visibility="visible">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_number_of_call"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="?attr/palphone_semibold_font"
+                        android:includeFontPadding="false"
+                        android:textColor="?attr/palphone_secondary_text_color"
+                        android:textSize="@dimen/normal_font_size"
+                        tools:ignore="SpUsage"
+                        tools:layout_editor_absoluteX="156dp"
+                        tools:text="(2)" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:contentDescription="@string/select_all_content"
+                    android:id="@+id/iv_call_type_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:src="@drawable/incoming_call_icon" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_call_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginLeft="6dp"
+                    android:fontFamily="?attr/palphone_light_font"
+                    android:includeFontPadding="false"
+                    android:textColor="?attr/palphone_fourth_text_color"
+                    android:paddingTop="2dp"
+                    android:textSize="@dimen/normal_font_size"
+                    tools:ignore="SpUsage" />
+
+                <ImageView
+                    android:id="@+id/iv_sim_card_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:baseline="14dp"
+                    android:contentDescription="@string/select_all_content"
+                    android:src="@drawable/sim_card_2_icon_english"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_phone_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="?attr/palphone_light_font"
+                android:includeFontPadding="false"
+                android:text="@string/_09127947034"
+                android:textColor="?attr/palphone_fourth_text_color"
+                android:textSize="@dimen/large_font_size"
+                tools:ignore="SpUsage" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_call_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:id="@+id/layout_pal_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:gravity="end"
+                android:minWidth="100dp"
+                android:orientation="horizontal"
+                android:paddingVertical="1dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_pal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:fontFamily="?attr/palphone_semibold_font"
+                    android:gravity="end"
+                    android:includeFontPadding="false"
+                    android:text="@string/PAL_INFO"
+                    android:textColor="?attr/palphone_main_background_color"
+                    android:textSize="@dimen/normal_font_size"
+                    android:visibility="gone"
+                    tools:ignore="SpUsage" />
+
+                <ImageView
+                    android:contentDescription="@string/select_all_content"
+                    android:id="@+id/iv_pal_info_icon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="end"
+                    android:layout_marginLeft="5dp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_am_pm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="?attr/palphone_light_font"
+                    android:text="@string/am"
+                    android:textAlignment="gravity"
+                    android:textAllCaps="true"
+                    android:textColor="?attr/palphone_secondary_text_color"
+                    android:textSize="@dimen/normal_font_size"
+                    tools:ignore="SpUsage" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_call_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@id/tv_am_pm"
+                    android:layout_toLeftOf="@+id/tv_am_pm"
+                    android:fontFamily="?attr/palphone_light_font"
+                    android:text="@string/_08_22"
+                    android:textAlignment="gravity"
+                    android:textAllCaps="true"
+                    android:textColor="@color/palphone_bermuda_gray"
+                    android:textSize="@dimen/normal_font_size"
+                    tools:ignore="SpUsage" />
+
+            </RelativeLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_call_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="?attr/palphone_light_font"
+                android:text="@string/_2022_11_02"
+                android:gravity="end"
+                android:includeFontPadding="false"
+                android:textAlignment="gravity"
+                android:textColor="@color/bermuda_grey"
+                android:textSize="@dimen/normal_font_size"
+                tools:ignore="SpUsage" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_toggle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/palphone_history_expand_box_background"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/layout_contact">
+
+        <LinearLayout
+            android:id="@+id/layout_call"
+            android:layout_width="wrap_content"
+            android:layout_height="61dp"
+            android:layout_gravity="center"
+            android:weightSum="2"
+            app:layout_constraintEnd_toEndOf="@+id/menu_icon_iv_fpb"
+            app:layout_constraintLeft_toLeftOf="@+id/profile_image_iv_fpb"
+            app:layout_constraintStart_toStartOf="@+id/profile_image_iv_fpb"
+            app:layout_constraintTop_toBottomOf="@+id/city_name_tv_fpb"
+            tools:ignore="UselessParent">
+
+            <ImageView
+                android:contentDescription="@string/select_all_content"
+                android:id="@+id/iv_call_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:foregroundGravity="center"
+                android:padding="7dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/call_icon" />
+
+            <ImageView
+                android:contentDescription="@string/select_all_content"
+                android:id="@+id/iv_sms_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="7dp"
+                android:src="@drawable/sms_icon" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="#707070"
+        app:layout_constraintBottom_toBottomOf="@+id/layout_main"
+        app:layout_constraintTop_toBottomOf="@+id/layout_toggle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

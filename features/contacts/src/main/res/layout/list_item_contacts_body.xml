@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_contact_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="6dp"
+        android:contentDescription="@string/iv_contact_content"
+        android:src="@drawable/default_profile_image_circular_border_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="5dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_contact_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:ellipsize="end"
+        android:fontFamily="?attr/palphone_semibold_font"
+        android:maxLines="1"
+        android:textColor="?attr/palphone_fourth_text_color"
+        android:textSize="@dimen/large_font_size"
+        app:layout_constraintBottom_toTopOf="@+id/tv_phone_number"
+        app:layout_constraintStart_toEndOf="@id/iv_contact_image"
+        app:layout_constraintTop_toTopOf="@+id/iv_contact_image"
+        tools:ignore="SpUsage"
+        tools:text="Hamed" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:ellipsize="end"
+        android:fontFamily="?attr/palphone_light_font"
+        android:maxLines="1"
+        android:text="@string/_09127947034"
+        android:textColor="?attr/palphone_fourth_text_color"
+        android:textSize="@dimen/large_font_size"
+        app:layout_constraintBottom_toBottomOf="@id/iv_contact_image"
+        app:layout_constraintStart_toEndOf="@id/iv_contact_image"
+        app:layout_constraintTop_toBottomOf="@+id/tv_contact_name"
+        tools:ignore="SpUsage" />
+
+    <ImageView
+        android:id="@+id/iv_pal_info_icon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:visibility="gone"
+        android:layout_marginEnd="6dp"
+        android:clickable="true"
+        android:contentDescription="@string/pal_info_icon_content"
+        android:focusable="true"
+        android:src="?attr/palphone_info_icon2"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_phone_number"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
