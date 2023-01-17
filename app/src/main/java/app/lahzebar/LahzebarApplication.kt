@@ -8,6 +8,7 @@ import dagger.android.HasAndroidInjector
 import javax.inject.Inject
 
 class LahzebarApplication : Application(), HasAndroidInjector {
+    ////tesst
 
     @Inject
     lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Any>
